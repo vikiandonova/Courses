@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Курс</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    
+  </head>
+  <body>
+    <h1 class="ll">Краток курс за Microsoft Excel</h1>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group" >
+              <a href="index.html" id="submit" >
+               <!-- <input type="submit" value="Login" id="submit"  > -->
+               <input type="button" value="Login" id="submit">
+              
+              </a>
+            </div>
+        </form>
+    </div>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDMoPhqBb1qq5jWhwT5lH5xwA85AMxRqgA",
+        authDomain: "courses-912a6.firebaseapp.com",
+        projectId: "courses-912a6",
+        storageBucket: "courses-912a6.appspot.com",
+        messagingSenderId: "632245110563",
+        appId: "1:632245110563:web:c6130518494c2146be2e96"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      import { getDatabase,ref,set,get,child } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+      const db=getDatabase(app);
+      var username=document.querySelector("#username");
+      var password=document.querySelector("#password");
+
+      var insertBtn = document.querySelector("#submit");
+      function InsertData() {
+        set(ref(db, "user/"+ username.value),{
+          username: username.value,
+          password: password.value,
+               
+            })
+            .then(()=>{
+                alert("Data added successfully");
+            })
+            .catch((error)=>{
+                alert(error);
+            });
+      }
+      insertBtn.addEventListener('click', InsertData);
+
+      // Додавање корисник во базата на податоци
+      set(ref(db, 'user/' + username), {
+          username: username,
+          password: password
+      });
+  
+    </script>
+     
+  </body>
+</footer>
+
+
+
+</body>
+</html>

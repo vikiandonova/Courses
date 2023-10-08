@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Курс</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">ANDONOVA</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">Почетна</a></li>
+          <li><a href="#experience">Курсеви</a></li>
+          
+          <li><a href="#contact">Контакт</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">ANDONOVA</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">Почетна</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Курсеви</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Контакт</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/cv.png" alt="VIKTORIJA ANDONOVA profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Здраво , јас сум</p>
+        <h1 class="title">Викторија Андонова</h1>
+        <p class="section__text__p2">Frontend Developer / Web Design</p>
+        <div class="btn-container">
+         <!-- <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/CV.pdf')"
+          >
+            Download CV
+          </button>-->
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Контакт
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/viktorija-andonova-1aaba7269/'"
+          /> 
+          <img
+            src="./assets/facebook.png"
+            alt="My facebook profile"
+            class="icon"
+            onclick="location.href='https://www.facebook.com/viktorija.andonova.10'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+     <!-- <p class="section__text__p1">Get To Know More</p>-->
+      <h1 class="title">Краток курс за Microsoft Excel</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/Questions.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+           <!--   <h3>Graduate</h3>
+              <p>2022/2023 <br />Software Engineering</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />-->
+              <h3>Едукација</h3>
+              <p>Овој курс е наменет за почетници во користењето на Microsoft Excel. Ќе научите основни концепти и техники за работа со Excel, како што се создавање и уредување на табели, формулирање на математички операции и функции, форматирање на податоците и други корисни функции на Excel.<br /></p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Цели на курсот :
+                <br />
+                - Да се научите како да создадете и уредувате табели во Excel.
+                <br /> - Да се научите како да формулирате и извршувате математички операции и функции во Excel.
+                <br />- Да се научите како да форматирате податоци и да ги претставите во атрактивен и разбирлив начин во Excel.
+                <br />- Да се научите како да користите некои други корисни функции и можности на Excel.
+                <br />-Да го подобрите вашиот капацитет и увереност во работата со Microsoft Excel.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow" 
+        
+      /> 
+    </section>
+    <section id="experience">
+    <!--  <p class="section__text__p1">Explore My</p> -->
+      <h1 class="title">Курс 1: Краток курс за Microsoft Excel</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Microsoft Excel</h2>
+           <p> Бесплатно </p> 
+           <!-- <button class="btn btn-color-1" id="myButton" onclick="redirectToNewPage()">  treba da se smene
+              Започни
+            </button>-->
+            <!--<button class="btn btn-color-1" id="myButton"  onclick="location.href='#zapocni.html'">
+              
+              Започни
+          </button>-->
+          <button class="btn btn-color-1" id="startButton"><a href="zapocni.html" class="btn btn-color-1">Започни</a>
+            
+          </button>
+           
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="title">Курс 2: Краток курс за Дигитален Маркетинг</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Дигитален Маркетинг</h2>
+           <p> Наскоро </p> 
+            <button class="btn btn-color-1" onclick="location.href='#contact'"> <!--treba da se smene-->
+              Започни
+            </button>
+
+           
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        
+      />
+    </section>
+   
+
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        
+      />
+
+
+
+    </section>
+    <section id="contact">
+      
+      <h1 class="title">Контактирај </h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:andonovaviktorija27@gmail.com">andonovaviktorija27@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/viktorija-andonova-1aaba7269/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">Почетна</a></li>
+            <li><a href="#experience">Курсеви</a></li>
+            
+            <li><a href="#contact">Контакт</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>VIKTORIJA ANDONOVA </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
